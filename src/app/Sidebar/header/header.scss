@@ -49,10 +49,6 @@
    ===================================== */
 .site-header-mobil{
   @include space;
-  position: fixed;
-  top: 0;
-  left: 232px;
-  right: 0;
   z-index: 10;
   background-color: #f8f9fa;
   padding: 1rem 2rem;

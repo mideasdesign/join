@@ -1,4 +1,4 @@
-
+@use '../../../style/flexbox.scss' as *;
 /* =====================================
    =           Desktop           =
    ===================================== */
@@ -37,4 +37,22 @@
 /* =====================================
    =            Header Desktop           =
    ===================================== */
+.nav-container-mobil {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 10px 0;
+}
+.nav-item-mobil {
+  @include center-column;
 
+  gap: 0.5rem;
+  color: #ffffff;
+}
+.nav-icon-mobil {
+  width: 24px;
+  height: 24px;
+}
+.nav-text-mobil {
+  font-size: 0.75rem;
+}
