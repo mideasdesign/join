@@ -1,0 +1,30 @@
+/* =====================================
+   =            Header Desktop           =
+   ===================================== */
+.add-contacts-section {
+  position: fixed;
+  top: 0;
+  left: 232px; /* Position next to sidebar which is 232px wide */
+  width: calc(100% - 232px); /* Take remaining width */
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+  animation: slideInFromRight 0.3s ease-out forwards;
+}
+.add-content {
+  width: 1200px;
+  max-width: 90%;
+  height: 600px;
+  background-color: #020202;
+  margin: 100px auto;
+  border-radius: 8px;
+  position: relative;
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
