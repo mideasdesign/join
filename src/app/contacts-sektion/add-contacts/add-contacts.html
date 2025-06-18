@@ -1,8 +1,6 @@
-@if (isMobile()) {
 
-} @else {
-    @if (isOpen) {
-        <section class="add-contacts-section">
+@if(isOpen) {
+        <section class="add-contacts-section"[ngClass]="{ 'mobile-layout': isMobile(), 'desktop-layout': !isMobile() }" >
             <div class="card-wrapper">
                 <div class="add-content">
                     <div class="left-container">
@@ -47,4 +45,4 @@
             </div>
         </section>
     }
-}
+
