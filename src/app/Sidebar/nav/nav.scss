@@ -1,0 +1,58 @@
+@use '../../../style/flexbox.scss' as *;
+/* =====================================
+   =           Desktop           =
+   ===================================== */
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  &:active {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+.nav-text {
+  flex: 1;
+  font-size: 1rem;
+}
+/* =====================================
+   =            Header Desktop           =
+   ===================================== */
+.nav-container-mobil {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 10px 0;
+}
+.nav-item-mobil {
+  @include center-column;
+
+  gap: 0.5rem;
+  color: #ffffff;
+}
+.nav-icon-mobil {
+  width: 24px;
+  height: 24px;
+}
+.nav-text-mobil {
+  font-size: 0.75rem;
+}

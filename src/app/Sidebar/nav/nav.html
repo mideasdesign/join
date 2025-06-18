@@ -1,0 +1,39 @@
+@if (isMobile()) {
+  <nav class="nav-container-mobil">
+    <a class="nav-item-mobil" routerLink="/summary">
+      <img src="/img/nav/1.png" alt="Summary" class="nav-icon-mobil">
+      <span class="nav-text-mobil">Summary</span>
+    </a>
+    <a class="nav-item-mobil" routerLink="/board">
+      <img src="/img/nav/2.png" alt="Board" class="nav-icon-mobil">
+      <span class="nav-text-mobil">Board</span>
+    </a>
+    <a class="nav-item-mobil" routerLink="/add-task">
+      <img src="/img/nav/3.png" alt="Add Task" class="nav-icon-mobil">
+      <span class="nav-text-mobil">Add Task</span>
+    </a>
+    <a class="nav-item-mobil" routerLink="/contacts">
+      <img src="/img/nav/4.png" alt="Contacts" class="nav-icon-mobil">
+      <span class="nav-text-mobil">Contacts</span>
+    </a>
+  </nav>
+} @else {
+    <nav class="nav-container">
+        <a class="nav-item" routerLink="/summary">
+            <img src="/img/nav/1.png" alt="Summary" class="nav-icon">
+            <span class="nav-text">Summary</span>
+        </a>
+        <a class="nav-item" routerLink="/board">
+            <img src="/img/nav/2.png" alt="Board" class="nav-icon">
+            <span class="nav-text">Board</span>
+        </a>
+        <a class="nav-item" routerLink="/add-task">
+            <img src="/img/nav/3.png" alt="Add Task" class="nav-icon">
+            <span class="nav-text">Add Task</span>
+        </a>
+        <a class="nav-item" routerLink="/contacts">
+            <img src="/img/nav/4.png" alt="Contacts" class="nav-icon">
+            <span class="nav-text">Contacts</span>
+        </a>
+    </nav>
+}
