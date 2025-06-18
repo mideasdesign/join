@@ -4,8 +4,8 @@
 .add-contacts-section {
   position: fixed;
   top: 0;
-  left: 232px; /* Position next to sidebar which is 232px wide */
-  width: calc(100% - 232px); /* Take remaining width */
+  left: 232px;
+  width: calc(100% - 232px);
   height: 100%;
   background-color: rgba(0,0,0,0.5);
   z-index: 1000;
