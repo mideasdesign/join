@@ -11,6 +11,9 @@
 *.sln.docstates
 .tsbuildinfo
 **/*.tsbuildinfo
+.idea/
+!.idea/codeStyles
+!.idea/runConfigurations
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
