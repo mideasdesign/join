@@ -1,27 +1,31 @@
-import {Component, OnDestroy, signal} from '@angular/core';
+import {Component, OnDestroy, signal, WritableSignal} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {BreakpointObserver} from '@angular/cdk/layout';
 import {RouterLink} from '@angular/router';
+import {CommonModule} from "@angular/common";
 
 @Component({
   selector: 'app-nav',
-  imports: [RouterLink],
+  imports: [RouterLink, CommonModule],
   templateUrl: './nav.html',
   styleUrl: './nav.scss'
 })
 export class Nav implements OnDestroy {
-  isMobile = signal(false);
+
+  isMobile: WritableSignal<boolean> = signal(false);
   private breakpointSubscription: Subscription;
 
   constructor(private breakpointObserver: BreakpointObserver) {
     this.breakpointSubscription = this.breakpointObserver
-      .observe(['(max-width: 616px)'])
-      .subscribe(result => this.isMobile.set(result.matches));
+        .observe(['(max-width: 616px)'])
+        .subscribe(result => this.isMobile.set(result.matches));
+  }
+
+  get mobileClass(): string {
+    return this.isMobile() ? 'mobile' : 'desktop';
   }
 
   ngOnDestroy(): void {
-    if (this.breakpointSubscription) {
-      this.breakpointSubscription.unsubscribe();
-    }
+    this.breakpointSubscription.unsubscribe();
   }
 }

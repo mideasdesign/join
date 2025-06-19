@@ -1,6 +1,6 @@
 
 @if(isOpen) {
-        <section class="add-contacts-section"[ngClass]="{ 'mobile-layout': isMobile(), 'desktop-layout': !isMobile() }" >
+        <section class="add-contacts-section" [ngClass]="mobileClass">
             <div class="card-wrapper">
                 <div class="add-content">
                     <div class="left-container">
@@ -45,4 +45,3 @@
             </div>
         </section>
     }
-

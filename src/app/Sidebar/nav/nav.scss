@@ -1,12 +1,16 @@
 @use '../../../style/flexbox.scss' as *;
-/* =====================================
-   =           Desktop           =
-   ===================================== */
 .nav-container {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 1rem;
+
+  &.mobile {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 10px 0;
+  }
 }
 .nav-item {
   display: flex;
@@ -17,6 +21,12 @@
   color: #ffffff;
   border-radius: 8px;
   transition: background-color 0.2s ease;
+
+  &.mobile {
+    @include center-column;
+    gap: 0.5rem;
+    color: #ffffff;
+  }
   &:hover {
     background-color: rgba(0, 0, 0, 0.05);
   }
@@ -29,30 +39,18 @@
   height: 24px;
   margin-right: 1rem;
   flex-shrink: 0;
+  &.mobile {
+    width: 24px;
+    height: 24px;
+  }
+
 }
 .nav-text {
   flex: 1;
   font-size: 1rem;
-}
-/* =====================================
-   =            Header Desktop           =
-   ===================================== */
-.nav-container-mobil {
-  display: flex;
-  justify-content: space-around;
-  gap: 1rem;
-  padding: 10px 0;
-}
-.nav-item-mobil {
-  @include center-column;
 
-  gap: 0.5rem;
-  color: #ffffff;
+  &.mobile {
+    font-size: 0.75rem;
+  }
 }
-.nav-icon-mobil {
-  width: 24px;
-  height: 24px;
-}
-.nav-text-mobil {
-  font-size: 0.75rem;
-}
+
