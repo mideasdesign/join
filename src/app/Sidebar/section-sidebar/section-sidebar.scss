@@ -1,4 +1,4 @@
-@use '../../../style/flexbox.scss' as *;
+
 /* =====================================
    =            Desktop           =
    ===================================== */
@@ -8,7 +8,7 @@
   height: 100vh;
 }
 .sidebar {
-  @include center-column;
+/*   @include center-column; */
   justify-content: space-around;
   width: 232px;
   background: rgba(42, 54, 71, 1);
@@ -21,9 +21,9 @@
 .nav-container {
   margin-top: -120px;
 }
-.bottom-links {
-  @include center-column;
-}
+/* .bottom-links {
+/*   @include center-column; 
+} */
 .nav-item {
   color: #878787;
   padding: 10px;

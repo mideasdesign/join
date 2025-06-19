@@ -1,4 +1,4 @@
-@use '../../../style/flexbox.scss' as *;
+
 /* =====================================
    =           Desktop           =
    ===================================== */
@@ -44,9 +44,9 @@
   padding: 10px 0;
 }
 .nav-item-mobil {
-  @include center-column;
+/*   @include center-column; */
 
-  gap: 0.5rem;
+  gap: 0.5rem;/*  */
   color: #ffffff;
 }
 .nav-icon-mobil {
